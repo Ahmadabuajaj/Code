@@ -1,3 +1,4 @@
+
 import matplotlib.pyplot as plt
 import networkx as nx
 from networkx.algorithms.flow import preflow_push
@@ -5,6 +6,10 @@ import osmnx as ox
 import geopandas as gpd
 import pandas as pd
 import numpy as np
+import time
+import sys
+from networkx.drawing.nx_pydot import read_dot
+from networkx.drawing.nx_pydot import write_dot
 
 
 def ban_cal():
@@ -96,7 +101,7 @@ def plot_weighted_graph():
                         unique_speed = list(set(all_speed))
                         unique_throughput = list(set(all_throughput))
                       
-                       
+                   
                      
                       
                              #  print("Length between", node1, "and", node2, "is", spl[node1][node2])
@@ -201,7 +206,52 @@ def plot_weighted_graph():
                x = spl.values()
                s = dis.append(x)
                l = len(dis)
-    print("sgt",l)
+   # print("sgt",l)
+    #lat = 2 * 1
+    Fiinal_speed = (sum(all_speed) +(l/sum(all_bandwidth)))+sum(all_speed)
+    trans = l / sum(all_bandwidth) 
+    pro_delay = Fiinal_speed / 2 
+    Fiinal_delay = trans + pro_delay
+    Fiinal_bandwidth = ( sum(all_weights) * Fiinal_delay ) / 2
+    Fiinal_avai = 2 * Fiinal_bandwidth * Fiinal_delay
+    Fiinal_thro = (sum(all_throughput) * Fiinal_bandwidth ) / 60
+    print("Fiinal_speed = ",Fiinal_speed)
+    print("Fiinal_delay = ",Fiinal_delay)
+    print("Fiinal_bandwidth = ",Fiinal_bandwidth)
+    print("Fiinal_avai = ",Fiinal_avai)
+    print("Fiinal_thro = ",Fiinal_thro)
+    sec_arr = []
+    for i in range(100):
+        i = i + 1 
+        sec_arr.append(i)
+  
+    for x in sec_arr:
+        s3 = sum(all_security)
+        s4 = sum(sec_arr)
+        Finsal_security = s3 * s4 
+        
+    print("Fiinal_security = ",Finsal_security)
+
+
+
+
+    
+    
+    #end
+    
+    #------------throughput--------------------
+  #  bandwidth = ( Avai * delay ) / 2
+   # Avai = 2 * bandwidth * total_delay
+    #lat = 2 * 1
+  # rtt = (lat+(size/bandwidth))+lat
+    #rtt = (lat+(l/bandwidth))+lat
+     #  pro_delay = rtt / 2 # 
+
+    
+    
+    #------------end---------------------------
+
+
 
                                     #plt.show() 
             
@@ -212,6 +262,5 @@ def plot_weighted_graph():
 if __name__=='__main__':
     plot_weighted_graph()
    
-
 
 

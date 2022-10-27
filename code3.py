@@ -71,12 +71,14 @@ def plot_weighted_graph():
      
     counter=0
     co = 0
+    
     for av in values:
         for se in values:
             for de in values:
                 for sp in values:
                     for ba in values:
                         for th in values:
+                            
                             G.add_edge(node_list[0],node_list[1],weight=av,bandwidth=ba,security=se,delay=de,speed=sp,throughput=th) 
                             G.add_edge(node_list[0],node_list[2],weight=av,bandwidth=ba,security=se,delay=de,speed=sp,throughput=th) 
                             G.add_edge(node_list[0],node_list[3],weight=av,bandwidth=ba,security=se,delay=de,speed=sp,throughput=th) 

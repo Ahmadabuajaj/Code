@@ -1,0 +1,59 @@
+  
+
+
+                                """          
+                                print("all_weights : ",all_weights)
+                                        
+                                print("all_bandwidth : ",all_bandwidth)
+                                           
+                                print("all_security : ",all_security)
+                                print("all_delay : ",all_delay)
+                                print("all_speed : ",all_speed)
+                                print("all_throughput : ",all_throughput)
+                                x = len(all_bandwidth)
+                                # z = len(set_w)
+                                            
+                                            
+                          #                  print("sss = ", x)
+                           #                 print("sss = ",z )
+                
+                                            
+                                print("--------")
+                
+                                           # print("nn" ,nx.maximum_flow_value(G,node_list[0],node_list[1]))
+                                           
+                                           
+                               """  
+   spl = dict(nx.all_pairs_shortest_path_length(G))
+     for node1 in spl:
+         for node2 in spl[node1]:
+                    x = spl.values()
+                    s = dis.append(x)
+                    l = len(dis)
+        # print("sgt",l)
+         #lat = 2 * 1
+         Fiinal_speed = (sum(all_speed) +(l/sum(all_bandwidth)))+sum(all_speed)
+         trans = l / sum(all_bandwidth) 
+         pro_delay = Fiinal_speed / 2 
+         Fiinal_delay = trans + pro_delay
+         Fiinal_bandwidth = ( sum(all_weights) * Fiinal_delay ) / 2
+         Fiinal_avai = 2 * Fiinal_bandwidth * Fiinal_delay
+         Fiinal_thro = (sum(all_throughput) * Fiinal_bandwidth ) / 60
+         print("Fiinal_speed = ",Fiinal_speed)
+         print("Fiinal_delay = ",Fiinal_delay)
+         print("Fiinal_bandwidth = ",Fiinal_bandwidth)
+         print("Fiinal_avai = ",Fiinal_avai)
+         print("Fiinal_thro = ",Fiinal_thro)
+         sec_arr = []
+         for i in range(100):
+             i = i + 1 
+             sec_arr.append(i)
+       
+         for x in sec_arr:
+             s3 = sum(all_security)
+             s4 = sum(sec_arr)
+             Finsal_security = s3 * s4 
+             
+         print("Fiinal_security = ",Finsal_security)
+     
+     

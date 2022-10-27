@@ -29,22 +29,7 @@ def plot_weighted_graph():
                     for ba in values:
                         for th in values:
                             G.add_edge(node_list[0],node_list[0],weight=av,bandwidth=ba,security=se,delay=de,speed=sp,throughput=th) 
-                            G.add_edge(node_list[0],node_list[1],weight=av,bandwidth=ba,security=se,delay=de,speed=sp,throughput=th) 
-                            G.add_edge(node_list[0],node_list[2],weight=av,bandwidth=ba,security=se,delay=de,speed=sp,throughput=th) 
-                            G.add_edge(node_list[0],node_list[3],weight=av,bandwidth=ba,security=se,delay=de,speed=sp,throughput=th) 
-                            G.add_edge(node_list[1],node_list[0],weight=av,bandwidth=ba,security=se,delay=de,speed=sp,throughput=th) 
-                            G.add_edge(node_list[1],node_list[1],weight=av,bandwidth=ba,security=se,delay=de,speed=sp,throughput=th) 
-                            G.add_edge(node_list[1],node_list[2],weight=av,bandwidth=ba,security=se,delay=de,speed=sp,throughput=th) 
-                            G.add_edge(node_list[1],node_list[3],weight=av,bandwidth=ba,security=se,delay=de,speed=sp,throughput=th) 
-                            G.add_edge(node_list[2],node_list[0],weight=av,bandwidth=ba,security=se,delay=de,speed=sp,throughput=th) 
-                            G.add_edge(node_list[2],node_list[1],weight=av,bandwidth=ba,security=se,delay=de,speed=sp,throughput=th) 
-                            G.add_edge(node_list[2],node_list[2],weight=av,bandwidth=ba,security=se,delay=de,speed=sp,throughput=th) 
-                            G.add_edge(node_list[2],node_list[3],weight=av,bandwidth=ba,security=se,delay=de,speed=sp,throughput=th) 
-                            G.add_edge(node_list[3],node_list[0],weight=av,bandwidth=ba,security=se,delay=de,speed=sp,throughput=th) 
-                            G.add_edge(node_list[3],node_list[1],weight=av,bandwidth=ba,security=se,delay=de,speed=sp,throughput=th) 
-                            G.add_edge(node_list[3],node_list[2],weight=av,bandwidth=ba,security=se,delay=de,speed=sp,throughput=th) 
-                            G.add_edge(node_list[3],node_list[3],weight=av,bandwidth=ba,security=se,delay=de,speed=sp,throughput=th) 
-
+                          
                             counter+=1
                             print(counter)
 

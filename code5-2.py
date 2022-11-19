@@ -41,19 +41,10 @@ class Design:
 #                print( "d;,;",(requirement) )
                  print(self.Edges[requirement][edge])
                  
-    def fitnessValues():
+    # def fitnessValues():
         
         
-        """
-             def print(self):
-                 for requirement in range(5):
-                     
-                     for edge in range(self.numberOfEdges-1):
-                         self.Edges[requirement][edge] = random.randint(1, 5)
-                         
-                         print(self.Edges[requirement][edge])
-                         #print("e",self.Edges)
-                        """
+       
             
 #main program, how many nodes, edges
 #for requirement in range(6):
@@ -62,20 +53,33 @@ class Design:
 numberOfNodes = int(input("Enter Number of Nodes:"))
 numberOfEdges = (int)(numberOfNodes*(numberOfNodes-1)/2)
 
-Edges = [[0 for x in range(3)] for y in range(numberOfEdges)]
+
+Edges = [[0 for x in range(4) ] for y in range(numberOfEdges)]
 
 for x in range(numberOfEdges):
-    Edges[0][x] = int(input("Enter node 0:"))
-    Edges[1][x] = int(input("Enter node 1:"))
-    Edges[2][x] = int(input("Enter distance:"))
-    
+    Edges[x][0] =  int(input("Enter node 0: "))
+    Edges[x][1] =  int(input("Enter node 1: "))
+    Edges[x][2] =  int(input("Enter distance: "))
+    Edges[x][3] =  int(input("Enter Bandwidth: "))
+    #Edges[x][4] =  int(input("Enter Availability :"))
+    #Edges[x][5] =  int(input("Enter Security:"))
     
 
+av_sec = []
+for i in range(1):
+    avai = int(input("Enter Number of Availability :"))
+    Sec = int(input("Enter Number of Security: "))
+    av_sec.append(avai)
+    av_sec.append(Sec)
 
-BW =  int(input("Enter Bandwidth:"))
+
+
+    
+print("The Ava = ",av_sec[0]  )
+print("The Sec = ",av_sec[1]  )      
+""" 
 DY = int(input("Enter Delay:"))
 SP = int(input("Enter Speed:"))
-SY =  int(input("Enter Security:"))
        
 FitnessValues = []
 for i in range(6):
@@ -89,18 +93,24 @@ FitnessValues[5] =   BW / (BW + DY)# eqation of ava
 
 #for i in Edges:
  #   FitnessValues = 5
+""" 
     
-csvfile=open('Edges.csv','w')
+csvfile=open('arr.csv','w')
 obj=csv.writer(csvfile)
-for i in Edges:
+for i in range(1):
       obj.writerow(Edges)
 #obj.writerows(map(lambda x: [x], FitnessValues))
 csvfile.close()
-with open('Edges.csv', 'r') as file:
+with open('arr.csv', 'r') as file:
     reader = csv.reader(file)
     for row in reader:
         print(row)
-    
+
+        
+        
+
+
+   
 Designs = []
 
 for d in range(1000):

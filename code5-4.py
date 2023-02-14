@@ -1,0 +1,178 @@
+import random
+
+import fileinput
+from random import seed
+import csv
+class Design:
+    #definition of graph
+    
+    nodes = []
+    Ava_des = 0
+    Sec_des = 0
+    Edges = []
+    FitnessValues = []
+    for i in range(2):
+        FitnessValues.append(i)
+    #numberOfNodes = int(input("enter"))
+    
+    def __init__(self,numberOfNodes):
+        self.numberOfNodes = numberOfNodes # = 5
+       # print("mm",self.numberOfNodes)
+        self.numberOfEdges = (int)(self.numberOfNodes*(self.numberOfNodes-1)/2) # = 10
+        #print(self.numberOfEdges)
+        #nodes = [[0 for x in range(self.numberOfNodes)] for y in range(2)]
+       # lines = self.numberOfEdges
+        self.Edges = [[0 for x in range(self.numberOfEdges)] for y in range(6)] # 10 col 6 rows
+        
+        for edge in range(self.numberOfEdges-1):
+              #  self.Edges[requirement][edge] = random.randint(1, 5)
+            self.Edges[0][edge] = random.randrange(1, 6)
+            self.Edges[1][edge] = random.randrange(1, 6)
+            self.Edges[2][edge] = random.randrange(1, 6)
+            self.Edges[3][edge] = random.randrange(1, 6)
+            self.Edges[4][edge] = random.randrange(1, 6) #ava
+            self.Edges[5][edge] = random.randrange(1, 6) # sec
+            
+
+    #def fitnessValues(self):
+       #for edge in range(self.numberOfEdges-1):
+            #self.FitnessValues.append ( self.Edges[4][edge] )
+            #self.FitnessValues.append ( self.Edges[5][edge] )
+
+            
+             
+            #Ava_des = sum(self.FitnessValues)
+            #print("SS",)
+
+            
+            #for i in  range(1):
+             #  print("fffaa",self.FitnessValues[1])
+        
+        
+
+       
+        #print([requirement])
+
+            
+    def print(self):
+        #print( (self.numberOfEdges) )
+        
+        for requirement in range(5):
+         for edge in range(self.numberOfEdges-1):
+#                print( "d;,;",(requirement) )
+                 print(self.Edges[requirement][edge])
+                 
+                 
+    
+        
+        
+       
+            
+#main program, how many nodes, edges
+#for requirement in range(6):
+    #  self.FitnessValues[requirement] = 5 # eqation of speed
+
+#for line in fileinput.input(files ='nodes.txt'):
+   # numberOfNodes = line
+  #  numberOfEdges = line
+    
+    #numberOfEdges = int(input("Enter Number of Edges:"))
+filne = "/home/ahmad/Documents/GitHub/Code/nodes.txt"
+f = open(filne, 'r+')
+
+lines = f.readlines() 
+
+for line in lines:
+    # numberOfNodes = line
+   #  numberOfEdges = line
+    print (line)
+
+
+#f.close()
+numberOfNodes = int(lines[0])
+numberOfEdges = int(lines[1])
+
+
+    #print()
+
+
+
+Edges = [[0 for x in range(4) ] for y in range(numberOfEdges)]
+c= int(lines[1])
+for x in range(numberOfEdges):
+    
+    Edges[x][0] =  int(lines[c]) 
+   
+    Edges[x][1] =  int(lines[c+1]) 
+    Edges[x][2] =  int(lines[c+2]) 
+    Edges[x][3] =  int(lines[c+3]) 
+    c+=c+c
+    
+    
+
+av_sec = []
+for i in range(1):
+    avai = int(input("Enter Number of Availability :"))
+    Sec = int(input("Enter Number of Security: "))
+    av_sec.append(avai)
+    av_sec.append(Sec)
+
+
+
+    
+print("The Ava = ",av_sec[0]  )
+print("The Sec = ",av_sec[1]  )      
+""" 
+DY = int(input("Enter Delay:"))
+SP = int(input("Enter Speed:"))
+       
+FitnessValues = []
+for i in range(6):
+    FitnessValues.append(i)
+FitnessValues[0] =  DY # eqation of Delay 
+FitnessValues[1] = 5
+FitnessValues[2] = SY
+FitnessValues[3] =  ((numberOfNodes * BW)/60) # th
+FitnessValues[4] = BW * numberOfNodes # speed
+FitnessValues[5] =   BW / (BW + DY)# eqation of ava 
+
+#for i in Edges:
+ #   FitnessValues = 5
+""" 
+    
+csvfile=open('arr.csv','w')
+obj=csv.writer(csvfile)
+for i in range(1):
+      obj.writerow(Edges)
+#obj.writerows(map(lambda x: [x], FitnessValues))
+csvfile.close()
+with open('arr.csv', 'r') as file:
+    reader = csv.reader(file)
+    for row in reader:
+        print(row)
+
+        
+        
+
+
+   
+Designs = []
+
+for d in range(1000):
+    design = Design(5)
+    Designs.append(design)
+    
+
+
+print("--------------")
+#Designs[100].print()
+
+#Designs[3].fitnessValues()
+
+
+print("--------------")
+
+#Designs[100].fitnessValues()
+  
+
+#Designs[3].print()

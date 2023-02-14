@@ -23,7 +23,7 @@ class Design:
       
   
     
-    Edges = [[0 for x in range(6)] for y in range(numberOfEdges)] 
+    Edges = [[0 for x in range(5)] for y in range(numberOfEdges)] 
     FitnessValues = [6]
     # Speed
     # Delay
@@ -54,13 +54,16 @@ class Design:
             for edge in range(self.numberOfEdges-1):
                 self.Edges[requirement][edge] = random.randint(1, 5)
                 print(self.Edges[requirement][edge])
+                #print("e",self.Edges)
+               
+                
                         
             
 #main program, how many nodes, edges
 
 Designs = []
 
-for d in range(10000):
+for d in range(2):
     design = Design()
     Designs.append(design)
 
@@ -72,4 +75,4 @@ Designs[1].print()
 
 print("----------------")
  
-Designs[100].print()
+#Designs[100].print()

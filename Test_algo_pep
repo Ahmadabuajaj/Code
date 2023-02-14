@@ -1,0 +1,100 @@
+Experiments#1:
+
+Desing#1: 
+[
+[1, 1, 2, 2, 3, 1, 4],
+[2, 3, 4, 2, 1, 1, 3],
+[3, 1, 3, 5, 3, 2, 1], 
+[4, 1, 4, 4, 4, 1, 1], 
+[5, 2, 3, 2, 1, 2, 1], 
+[6, 2, 4, 3, 1, 1, 1]
+
+]
+
+Design#2:
+[
+[1, 1, 2, 2, 3, 2, 1], 
+[2, 3, 4, 2, 1, 4, 1], 
+[3, 1, 3, 5, 3, 2, 2], 
+[4, 1, 4, 4, 4, 1, 2], 
+[5, 2, 3, 2, 1, 1, 1], 
+[6, 2, 4, 3, 1, 1, 1]
+
+]
+
+
+Weight#1 = 0.6
+Weight#2 = 0.4
+SUMofDes = 18
+SUMofBand = 13
+SUMofAva = 8
+SUMofSec= 11
+
+( Weight#1 * SUMofAva ) = 0.6 * 8  = 4.8
+( Weight#2 * SUMofSec ) = 0.4 * 11  = 4.4
+
+FitnessValue = SumOfdistances + SumOfbandwidth + ( Weight#1 * SumOfAvailability) + (Weight#2 * SumOfSecurity) 
+= 40.2 
+FitnessValue - MainDesign 
+= 40.2 - 36.0
+= 4.199999999999996
+
+
+
+
+
+
+Manual_Desin =  4.199999999999996
+GA = 1.8000000000000043
+PSO = 4.200
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Experiments#2:
+
+Desing#2:
+[
+[1, 1, 2, 2, 3, 1, 1],
+[2, 3, 4, 2, 1, 2, 2],
+[3, 1, 3, 5, 3, 1, 4], 
+[4, 1, 4, 4, 4, 1, 2], 
+[5, 2, 3, 2, 1, 2, 2], 
+[6, 2, 4, 3, 1, 1, 1]
+
+]
+
+
+
+
+[
+[1, 1, 2, 2, 3, 1, 3], 
+[2, 3, 4, 2, 1, 2, 2],
+[3, 1, 3, 5, 3, 1, 2],
+[4, 1, 4, 4, 4, 1, 3],
+[5, 2, 3, 2, 1, 1, 3],
+[6, 2, 4, 3, 1, 1, 1]
+
+]
+
+
+Weight#1 = 0.6
+Weight#2 = 0.4
+SUMofDes = 18
+SUMofBand = 13
+SUMofAva = 7
+SUMofSec= 14
+
+( Weight#1 * SUMofAva ) = 0.6 * 7  = 4.2
+( Weight#2 * SUMofSec ) = 0.4 * 14  = 5.6
+
+FitnessValue = SumOfdistances + SumOfbandwidth + ( Weight#1 * SumOfAvailability) + (Weight#2 * SumOfSecurity) 
+= 40.8
+FitnessValue - MainDesign 
+= 40.8 - 36.0
+= 4.799999999999997
+
+
+
+
+Manual_Desin =  4.799999999999997
+GA = 1.3999999999999986
+PSO = 4.600
